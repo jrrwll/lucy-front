@@ -1,5 +1,5 @@
 
-export function format(content: string, lang: string): string {
+export function format_code(content: string, lang: string): string {
     switch (lang) {
         case "json":
             return JSON.stringify(JSON.parse(content), null, 4);

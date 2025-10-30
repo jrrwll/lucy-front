@@ -4,8 +4,8 @@ import MonacoEditor from "@monaco-editor/react";
 
 import { fetchGeo } from "@/provider/geojs";
 import { convert } from "@/util/convert";
-import { format } from "@/util/format";
-import { createHighlighterOnMount } from "@/util/thridparty/editor";
+import { format_code } from "@/util/format_code.ts";
+import { createHighlighterOnMount } from "@/thridparty/editor";
 
 const { Option } = Select;
 
@@ -17,7 +17,7 @@ const Index: React.FC = () => {
 
     const onClick = () => {
         fetchGeo(ip).then((res) => {
-            const formated_json = format(res, "json");
+            const formated_json = format_code(res, "json");
             setContentJson(formated_json);
             const formated = convert(formated_json, undefined, language);
             setContent(formated);
