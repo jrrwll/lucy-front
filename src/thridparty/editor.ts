@@ -1,29 +1,15 @@
-import { type Monaco, type OnMount } from "@monaco-editor/react";
-import { editor } from "monaco-editor";
-import { createHighlighter } from "shiki";
-import { shikiToMonaco } from "@shikijs/monaco";
+import {type Extension} from '@uiw/react-codemirror';
 
-/*
-<MonacoEditor key={language} language={language} .../>
-*/
-// https://shiki.style/languages, suck as groovy
-// https://shiki.style/themes, such as one-dark-pro
-export function createHighlighterOnMount(
-    lang: string, theme: string = "github-light",
-    onMount?: (editor: editor.IStandaloneCodeEditor, monaco: Monaco) => void
-): OnMount {
-    return async (editor: editor.IStandaloneCodeEditor, monaco: Monaco) => {
-        if (onMount) onMount(editor, monaco);
+import { markdown } from '@codemirror/lang-markdown';
+import { java } from '@codemirror/lang-java';
+import { javascript } from '@codemirror/lang-javascript';
+import { sql } from '@codemirror/lang-sql';
+import { python } from '@codemirror/lang-python';
 
-        const highlighter = await createHighlighter({
-            themes: [theme],
-            langs: [lang],
-        });
-
-        monaco.languages.register({ id: lang });
-
-        shikiToMonaco(highlighter, monaco);
-
-        monaco.editor.setTheme(theme);
-    };
-}
+export const EXTENSIONS: Extension[] = [
+    javascript({ jsx: true }),
+    markdown(),
+    java(),
+    sql(),
+    python(),
+];

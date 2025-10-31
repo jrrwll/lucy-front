@@ -1,27 +1,27 @@
 import React, { useState } from "react";
 import { Button, Col, Input, Row, Select, Space } from "antd";
-import MonacoEditor from "@monaco-editor/react";
+import CodeMirror from '@uiw/react-codemirror'
 
-import { fetchGeo } from "@/provider/geojs";
+import { fetchGeo } from "@/thridparty/geojs";
 import { convert } from "@/util/convert";
-import { format_code } from "@/util/format_code.ts";
-import { createHighlighterOnMount } from "@/thridparty/editor";
+import { format_code } from "@/provider/code";
+import { EXTENSIONS } from '@/thridparty/editor.ts'
 
 const { Option } = Select;
 
 const Index: React.FC = () => {
     const [ip, setIp] = useState("");
     const [contentJson, setContentJson] = useState("");
-    const [content, setContent] = useState("\n".repeat(15));
+    const [content, setContent] = useState("");
     const [language, setLanguage] = useState("json");
 
-    const onClick = () => {
-        fetchGeo(ip).then((res) => {
-            const formated_json = format_code(res, "json");
-            setContentJson(formated_json);
-            const formated = convert(formated_json, undefined, language);
-            setContent(formated);
-        });
+    const onClick = async () => {
+        const res = await fetchGeo(ip);
+        const formated_json = await format_code(res, "json");
+        const formated = convert(formated_json, undefined, language);
+
+        setContentJson(formated_json);
+        setContent(formated);
     };
 
     const onChange = (v: string | undefined) => {
@@ -61,17 +61,13 @@ const Index: React.FC = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <MonacoEditor
+                    <CodeMirror
                         key={language}
-                        language={language}
-                        height={400}
-                        theme="github-light"
                         value={content}
-                        options={{
-                            selectOnLineNumbers: true,
-                        }}
-                        onMount={createHighlighterOnMount(language)}
                         onChange={onChange}
+                        minHeight={`${window.innerHeight / 2}px`}
+                        minWidth={`${window.innerWidth / 2}px`}
+                        extensions={EXTENSIONS}
                     />
                 </Row>
             </Space>

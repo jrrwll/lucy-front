@@ -1,9 +1,9 @@
 import { Navigate, Route } from 'react-router-dom';
-import React, { type ComponentType, type ReactNode } from 'react';
+import React, { type ComponentType, type ReactNode, Suspense } from 'react';
 import { renderRoutes, type RouteItem } from '@/util/module/router';
 import { BrowserRouter, HashRouter, Routes } from 'react-router'
 
-function renderReactRoutes<T extends ReactNode>(
+function renderReactRoutes<T extends ComponentType>(
     routes: RouteItem<ComponentType<T>>[],
     currentPath: string
 ): ReactNode[] {
@@ -13,33 +13,45 @@ function renderReactRoutes<T extends ReactNode>(
         if ('path' in item) {
             const { path, component } = item;
             const element = React.createElement(component as ComponentType);
-            reactRoutes.push(<Route key={path} path={path} element={element} />);
+            reactRoutes.push(<Route key={path} path={path} element={element}/>);
         } else {
             const { from, to } = item;
-            reactRoutes.push(<Route key={from} path={from} element={<Navigate to={to} />} />);
+            reactRoutes.push(<Route key={from} path={from} element={<Navigate to={to}/>}/>);
         }
     });
     return reactRoutes;
 }
 
 export interface AppRouteProps {
-    routes: RouteItem<React.ComponentType<ReactNode>>[];
+    routes: RouteItem<React.ComponentType<ComponentType>>[];
+
+    fallback?: ReactNode;
 }
 
-export function AppRoute({ routes }: AppRouteProps) {
+export function AppRoute({ routes, fallback }: AppRouteProps) {
     const children = renderReactRoutes(routes, '/');
     return (
         <BrowserRouter>
-            <Routes>{children}</Routes>
+            {fallback && (
+                <Suspense fallback={fallback}>
+                    <Routes>{children}</Routes>
+                </Suspense>
+            )}
+            {!fallback && <Routes>{children}</Routes>}
         </BrowserRouter>
     );
 }
 
-export function AppHashRoute({ routes }: AppRouteProps) {
+export function AppHashRoute({ routes, fallback }: AppRouteProps) {
     const children = renderReactRoutes(routes, '/');
     return (
         <HashRouter>
-            <Routes>{children}</Routes>
+            {fallback && (
+                <Suspense fallback={fallback}>
+                    <Routes>{children}</Routes>
+                </Suspense>
+            )}
+            {!fallback && <Routes>{children}</Routes>}
         </HashRouter>
     );
 }
