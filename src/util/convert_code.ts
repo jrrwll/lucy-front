@@ -38,7 +38,7 @@ export function xml2json(xmlStr: string): string {
     return JSON.stringify(obj, null, 4);
 }
 
-export function convert(
+export function convert_code(
     content: string,
     fromFormat: string = 'json',
     toFormat: string = 'json'

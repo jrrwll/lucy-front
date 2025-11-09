@@ -5,16 +5,17 @@ import { EXTENSIONS } from "@/thridparty/editor";
 import { MINIFY_LANGS } from "@/config/constant";
 
 import { format_code, minify_code } from "@/provider/code";
+import { detect_lang } from '@/util/detect_lang.ts'
 
 const { Option } = Select;
 
 const Index: React.FC = () => {
     const [language, setLanguage] = useState("json");
-    const [ident, setIdent] = useState("4");
+    const [indent, setIndent] = useState("4");
     const [content, setContent] = useState("");
 
     const onClickFormat = async () => {
-        const formated = await format_code(content, language, Number(ident));
+        const formated = await format_code(content, language, Number(indent));
         setContent(formated);
     };
 
@@ -30,6 +31,7 @@ const Index: React.FC = () => {
                     <Space>
                         <Select
                             defaultValue={language}
+                            value={language}
                             onChange={(value: string) => {
                                 setLanguage(value);
                             }}
@@ -41,6 +43,7 @@ const Index: React.FC = () => {
                             <Option value="json">JSON</Option>
                             <Option value="less">LESS</Option>
                             <Option value="markdown">Markdown</Option>
+                            <Option value="plaintext">PlainText</Option>
                             <Option value="scss">SCSS</Option>
                             <Option value="sql">SQL</Option>
                             <Option value="toml">TOML</Option>
@@ -49,9 +52,9 @@ const Index: React.FC = () => {
                             <Option value="yaml">YAML</Option>
                         </Select>
                         <Select
-                            defaultValue={ident}
+                            defaultValue={indent}
                             onChange={(value: string) => {
-                                setIdent(value);
+                                setIndent(value);
                             }}
                         >
                             <Option value="0">无缩进</Option>
@@ -76,8 +79,14 @@ const Index: React.FC = () => {
                         extensions={EXTENSIONS}
                         key={language}
                         value={content}
-                        onChange={(v: string | undefined) => {
-                            if (v !== undefined) setContent(v);
+                        onChange={async (v: string | undefined) => {
+                            if (v !== undefined) {
+                                setContent(v);
+                                const lang = await detect_lang(v);
+                                if (lang !== language) {
+                                    setLanguage(lang);
+                                }
+                            }
                         }}
                     />
                 </Col>

@@ -1,0 +1,235 @@
+[
+  {
+    "key": "length",
+    "name": "长度",
+    "units": [
+      {
+        "key": "m",
+        "name": "米",
+        "is_deafult": true
+      },
+      {
+        "key": "km",
+        "name": "千米(公里)",
+        "convert": 1000
+      },
+      {
+        "key": "dm",
+        "name": "分米",
+        "convert": 0.1
+      },
+      {
+        "key": "cm",
+        "name": "厘米",
+        "convert": 0.01
+      },
+      {
+        "key": "mm",
+        "name": "毫米",
+        "convert": 0.001
+      },
+      {
+        "key": "um",
+        "name": "微米",
+        "convert": 0.000001
+      },
+      {
+        "key": "nm",
+        "name": "纳米",
+        "convert": 0.000000001
+      },
+      {
+        "key": "pm",
+        "name": "皮米",
+        "convert": 0.000000000001
+      },
+      {
+        "key": "ly",
+        "name": "光年",
+        "convert": "9.4607e+15"
+      },
+      {
+        "key": "au",
+        "name": "天文单位",
+        "convert": 149600000000
+      },
+      {
+        "key": "in",
+        "name": "英寸",
+        "convert": 0.0254
+      },
+      {
+        "key": "ft",
+        "name": "英尺",
+        "convert": 0.3048
+      },
+      {
+        "key": "yd",
+        "name": "码",
+        "convert": 0.9144
+      },
+      {
+        "key": "mi",
+        "name": "英里",
+        "convert": 1609.344
+      },
+      {
+        "key": "nmi",
+        "name": "海里",
+        "convert": 1852
+      },
+      {
+        "key": "fm",
+        "name": "英寻",
+        "convert": 1.8288
+      },
+      {
+        "key": "fur",
+        "name": "弗隆",
+        "convert": 201.168
+      },
+      {
+        "key": "li",
+        "name": "里",
+        "convert": 500
+      },
+      {
+        "key": "zhang",
+        "name": "丈",
+        "convert": 3.333333333333
+      },
+      {
+        "key": "chi",
+        "name": "尺",
+        "convert": 0.333333333333
+      },
+      {
+        "key": "cun",
+        "name": "寸",
+        "convert": 0.033333333333
+      },
+      {
+        "key": "fen",
+        "name": "分",
+        "convert": 0.003333333333
+      },
+      {
+        "key": "li",
+        "name": "厘",
+        "convert": 0.000333333333
+      },
+      {
+        "key": "hao",
+        "name": "毫",
+        "convert": 0.000033333333
+      }
+    ]
+  },
+  {
+    "key": "area",
+    "name": "面积",
+    "units": [
+      {
+        "key": "m2",
+        "name": "平方米",
+        "is_deafult": true
+      },
+      {
+        "key": "km2",
+        "name": "平方千米",
+        "convert": 1000000
+      },
+      {
+        "key": "ha",
+        "name": "公顷",
+        "convert": 10000
+      },
+      {
+        "key": "are",
+        "name": "公亩",
+        "convert": 100
+      },
+      {
+        "key": "dm2",
+        "name": "平方分米",
+        "convert": 0.01
+      },
+      {
+        "key": "cm2",
+        "name": "平方厘米",
+        "convert": 0.0001
+      },
+      {
+        "key": "mm2",
+        "name": "平方毫米",
+        "convert": 0.0000001
+      },
+      {
+        "key": "mu",
+        "name": "顷",
+        "convert": 66666.6666666667
+      },
+      {
+        "key": "mu",
+        "name": "亩",
+        "convert": 666.666666666667
+      },
+      {
+        "key": "fen",
+        "name": "分",
+        "convert": 66.6666666666667
+      },
+      {
+        "key": "chi2",
+        "name": "平方尺",
+        "convert": 0.111111111111
+      },
+      {
+        "key": "cun2",
+        "name": "平方寸",
+        "convert": 0.001111111111
+      },
+      {
+        "key": "acre",
+        "name": "英亩",
+        "convert": 4046.8564224
+      },
+      {
+        "key": "mi2",
+        "name": "平方英里",
+        "convert": 2589988.110336
+      },
+      {
+        "key": "yd2",
+        "name": "平方码",
+        "convert": 0.8361274
+      },
+      {
+        "key": "ft2",
+        "name": "平方英尺",
+        "convert": 0.092903
+      },
+      {
+        "key": "in2",
+        "name": "平方英寸",
+        "convert": 0.0006452
+      }
+    ]
+  },
+  {
+    "key": "volume",
+    "name": "体积"
+  },
+  {
+    "key": "weight",
+    "name": "重量"
+  },
+  {
+    "key": "temperature",
+    "name": "温度"
+  },
+  {
+    "key": "time",
+    "name": "时间"
+  }
+]

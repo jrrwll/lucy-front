@@ -3,7 +3,7 @@ import { Button, Col, Input, Row, Select, Space } from "antd";
 import CodeMirror from '@uiw/react-codemirror'
 
 import { fetchGeo } from "@/thridparty/geojs";
-import { convert } from "@/util/convert";
+import { convert_code } from "@/util/convert_code";
 import { format_code } from "@/provider/code";
 import { EXTENSIONS } from '@/thridparty/editor.ts'
 
@@ -18,7 +18,7 @@ const Index: React.FC = () => {
     const onClick = async () => {
         const res = await fetchGeo(ip);
         const formated_json = await format_code(res, "json");
-        const formated = convert(formated_json, undefined, language);
+        const formated = convert_code(formated_json, undefined, language);
 
         setContentJson(formated_json);
         setContent(formated);
@@ -30,7 +30,7 @@ const Index: React.FC = () => {
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleLanguageChange = (value: any) => {
-        const formated = contentJson ? convert(contentJson, undefined, value) : "";
+        const formated = contentJson ? convert_code(contentJson, undefined, value) : "";
         setLanguage(value);
         setContent(formated);
     };

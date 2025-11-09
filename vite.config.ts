@@ -31,5 +31,12 @@ export default defineConfig({
                 },
             },
         },
+        minify: 'terser',
+        terserOptions: {
+            compress: {
+                unused: true,
+                dead_code: true,
+            },
+        },
     },
 })
