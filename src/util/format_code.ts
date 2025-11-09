@@ -8,7 +8,6 @@ import * as parserTypescript from 'prettier/plugins/typescript';
 import * as parserEstree from 'prettier/plugins/estree';
 import { parse as parseJsonc } from 'jsonc-parser';
 import javaPlugin from 'prettier-plugin-java'
-import sqlPlugin from 'prettier-plugin-sql'
 
 export const format_langs: string[] = [
     'javascript',
@@ -22,7 +21,6 @@ export const format_langs: string[] = [
     'yaml',
     // plugins
     'java',
-    'sql',
 ]
 
 const plugins: Array<string | URL | Plugin> = [
@@ -33,7 +31,6 @@ const plugins: Array<string | URL | Plugin> = [
     parserTypescript,
     parserEstree as Plugin,
     javaPlugin,
-    sqlPlugin,
 ];
 
 export async function fast_format_code(code: string, lang: string, indent: number = 4): Promise<string> {

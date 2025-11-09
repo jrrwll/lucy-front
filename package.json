@@ -25,7 +25,6 @@
     "jsonc-parser": "^3.3.1",
     "prettier": "^3.6.2",
     "prettier-plugin-java": "^2.7.7",
-    "prettier-plugin-sql": "^0.19.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router": "^7.9.5",
