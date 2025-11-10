@@ -26,3 +26,7 @@ pnpm i prettier prettier-plugin-java prettier-plugin-sql
 pnpm i csso jsonc-parser
 pnpm i -D @types/csso
 ```
+
+```shell
+pnpm i decimal.js
+```

@@ -1,13 +1,14 @@
 export interface UnitItem {
     key: string
-    name: string
-    is_default: boolean
+    label: string
+    pinyin?: string
+    is_default?: boolean
     convert: number | string
 }
 
 export interface MeasureItem {
     key: string
-    name: string
+    label: string
     units: UnitItem[]
 }
 

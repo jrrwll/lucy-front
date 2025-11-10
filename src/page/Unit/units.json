@@ -1,235 +1,271 @@
 [
   {
     "key": "length",
-    "name": "长度",
+    "label": "长度",
     "units": [
       {
         "key": "m",
-        "name": "米",
-        "is_deafult": true
+        "label": "米",
+        "pinyin": "mi",
+        "convert": 1,
+        "is_default": true
       },
       {
         "key": "km",
-        "name": "千米(公里)",
+        "label": "千米(公里)",
+        "pinyin": "qianmi(gongli)",
         "convert": 1000
       },
       {
         "key": "dm",
-        "name": "分米",
+        "label": "分米",
+        "pinyin": "fenmi",
         "convert": 0.1
       },
       {
         "key": "cm",
-        "name": "厘米",
+        "label": "厘米",
+        "pinyin": "limi",
         "convert": 0.01
       },
       {
         "key": "mm",
-        "name": "毫米",
+        "label": "毫米",
+        "pinyin": "haomi",
         "convert": 0.001
       },
       {
         "key": "um",
-        "name": "微米",
+        "label": "微米",
+        "pinyin": "weimi",
         "convert": 0.000001
       },
       {
         "key": "nm",
-        "name": "纳米",
+        "label": "纳米",
+        "pinyin": "nami",
         "convert": 0.000000001
       },
       {
         "key": "pm",
-        "name": "皮米",
+        "label": "皮米",
+        "pinyin": "pimu",
         "convert": 0.000000000001
       },
       {
         "key": "ly",
-        "name": "光年",
+        "label": "光年",
+        "pinyin": "guangnian",
         "convert": "9.4607e+15"
       },
       {
         "key": "au",
-        "name": "天文单位",
+        "label": "天文单位",
+        "pinyin": "tianwendanwei",
         "convert": 149600000000
       },
       {
         "key": "in",
-        "name": "英寸",
+        "label": "英寸",
+        "pinyin": "yingcun",
         "convert": 0.0254
       },
       {
         "key": "ft",
-        "name": "英尺",
+        "label": "英尺",
+        "pinyin": "yingchi",
         "convert": 0.3048
       },
       {
         "key": "yd",
-        "name": "码",
+        "label": "码",
+        "pinyin": "ma",
         "convert": 0.9144
       },
       {
         "key": "mi",
-        "name": "英里",
+        "label": "英里",
+        "pinyin": "yingli",
         "convert": 1609.344
       },
       {
         "key": "nmi",
-        "name": "海里",
+        "label": "海里",
+        "pinyin": "haili",
         "convert": 1852
       },
       {
         "key": "fm",
-        "name": "英寻",
+        "label": "英寻",
+        "pinyin": "yingxun",
         "convert": 1.8288
       },
       {
         "key": "fur",
-        "name": "弗隆",
+        "label": "弗隆",
+        "pinyin": "fulong",
         "convert": 201.168
       },
       {
-        "key": "li",
-        "name": "里",
+        "key": "shili",
+        "label": "里",
         "convert": 500
       },
       {
         "key": "zhang",
-        "name": "丈",
+        "label": "丈",
+        "pinyin": "shizhang",
         "convert": 3.333333333333
       },
       {
         "key": "chi",
-        "name": "尺",
+        "label": "尺",
+        "pinyin": "shichi",
         "convert": 0.333333333333
       },
       {
         "key": "cun",
-        "name": "寸",
+        "label": "寸",
+        "pinyin": "shicun",
         "convert": 0.033333333333
       },
       {
         "key": "fen",
-        "name": "分",
+        "label": "分",
         "convert": 0.003333333333
       },
       {
         "key": "li",
-        "name": "厘",
+        "label": "厘",
         "convert": 0.000333333333
       },
       {
         "key": "hao",
-        "name": "毫",
+        "label": "毫",
         "convert": 0.000033333333
       }
     ]
   },
   {
     "key": "area",
-    "name": "面积",
+    "label": "面积",
     "units": [
       {
         "key": "m2",
-        "name": "平方米",
-        "is_deafult": true
+        "label": "平方米",
+        "pinyin": "pingfangmi",
+        "is_default": true,
+        "convert": 1
       },
       {
         "key": "km2",
-        "name": "平方千米",
+        "label": "平方千米",
+        "pinyin": "pingfangqianmi",
         "convert": 1000000
       },
       {
         "key": "ha",
-        "name": "公顷",
+        "label": "公顷",
+        "pinyin": "gongqing",
         "convert": 10000
       },
       {
         "key": "are",
-        "name": "公亩",
+        "label": "公亩",
+        "pinyin": "gongmu",
         "convert": 100
       },
       {
         "key": "dm2",
-        "name": "平方分米",
+        "label": "平方分米",
+        "pinyin": "pingfangfenmi",
         "convert": 0.01
       },
       {
         "key": "cm2",
-        "name": "平方厘米",
+        "label": "平方厘米",
+        "pinyin": "pingfanglimi",
         "convert": 0.0001
       },
       {
         "key": "mm2",
-        "name": "平方毫米",
+        "label": "平方毫米",
+        "pinyin": "pingfanghaomi",
         "convert": 0.0000001
       },
       {
-        "key": "mu",
-        "name": "顷",
+        "key": "qing",
+        "label": "顷",
         "convert": 66666.6666666667
       },
       {
         "key": "mu",
-        "name": "亩",
+        "label": "亩",
         "convert": 666.666666666667
       },
       {
         "key": "fen",
-        "name": "分",
+        "label": "分",
         "convert": 66.6666666666667
       },
       {
         "key": "chi2",
-        "name": "平方尺",
+        "label": "平方尺",
+        "pinyin": "pingfangchi",
         "convert": 0.111111111111
       },
       {
         "key": "cun2",
-        "name": "平方寸",
+        "label": "平方寸",
+        "pinyin": "pingfangcun",
         "convert": 0.001111111111
       },
       {
         "key": "acre",
-        "name": "英亩",
+        "label": "英亩",
+        "pinyin": "yingmu",
         "convert": 4046.8564224
       },
       {
         "key": "mi2",
-        "name": "平方英里",
+        "label": "平方英里",
+        "pinyin": "pingfangyingli",
         "convert": 2589988.110336
       },
       {
         "key": "yd2",
-        "name": "平方码",
+        "label": "平方码",
+        "pinyin": "pingfangma",
         "convert": 0.8361274
       },
       {
         "key": "ft2",
-        "name": "平方英尺",
+        "label": "平方英尺",
+        "pinyin": "pingfangyingchi",
         "convert": 0.092903
       },
       {
         "key": "in2",
-        "name": "平方英寸",
+        "label": "平方英寸",
+        "pinyin": "pingfangyingcun",
         "convert": 0.0006452
       }
     ]
   },
   {
     "key": "volume",
-    "name": "体积"
+    "label": "体积"
   },
   {
     "key": "weight",
-    "name": "重量"
+    "label": "重量"
   },
   {
     "key": "temperature",
-    "name": "温度"
+    "label": "温度"
   },
   {
     "key": "time",
-    "name": "时间"
+    "label": "时间"
   }
 ]
