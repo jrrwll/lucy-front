@@ -1,24 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Typography, Space, Col, InputNumber, Row, Select, Tabs } from "antd";
 import measures, { type MeasureItem, type UnitItem } from "@/page/Unit/units";
 import Detail from "./Detail";
-import { useUnitValueStore } from "./state";
 
 const all_option: UnitItem = {
-    key: "all",
+    value: "all",
     label: "全部",
     convert: 1,
 };
 
 const Panel: React.FC<{ measure: MeasureItem }> = ({ measure }) => {
-    const { unitValue, setUnitValue } = useUnitValueStore()
-
     const default_unit = measure.units.find((unit) => unit.is_default)!;
+
+    const [ unitValue, setUnitValue ] = useState(1);
+    const [ fromUnit, setFromUnit ] = useState(default_unit.value);
+    const [ toUnit, setToUnit ] = useState('all');
 
     const filterOption = (input: string, option?: UnitItem) => {
         const kw = input.toLowerCase();
         return (
-            option!.key.includes(kw) ||
+            option!.value.includes(kw) ||
             option!.label.includes(kw) ||
             (option!.pinyin?.includes(kw) ?? false)
         );
@@ -42,20 +43,22 @@ const Panel: React.FC<{ measure: MeasureItem }> = ({ measure }) => {
                 <Col span={10}>
                     <Space direction="horizontal" size="small" style={{ width: "100%" }}>
                         <Select
-                            defaultValue={default_unit.label}
+                            defaultValue={default_unit.value}
+                            onChange={v => setFromUnit(v)}
                             popupMatchSelectWidth={false}
                             showSearch
                             filterOption={filterOption}
-                            optionFilterProp="label"
+                            optionFilterProp="key"
+                            optionLabelProp="label"
                             options={measure.units}
                         ></Select>
                         <Typography>{"<->"}</Typography>
                         <Select
-                            defaultValue={"全部"}
+                            defaultValue={"all"}
+                            onChange={v => setToUnit(v)}
                             popupMatchSelectWidth={false}
                             showSearch
                             filterOption={filterOption}
-                            optionFilterProp="label"
                             options={[all_option, ...measure.units]}
                         ></Select>
                     </Space>
@@ -63,7 +66,8 @@ const Panel: React.FC<{ measure: MeasureItem }> = ({ measure }) => {
             </Row>
             <Row gutter={8}>
                 <Col span={24}>
-                    <Detail measure={measure} />
+                    <Detail measure={measure} unitValue={unitValue}
+                            fromUnit={fromUnit} toUnit={toUnit}/>
                 </Col>
             </Row>
         </Space>
@@ -74,7 +78,7 @@ const Index: React.FC = () => {
     const tab_items = measures.map((measure) => {
         return {
             label: measure.label,
-            key: measure.key,
+            key: measure.value,
             children: <Panel measure={measure} />,
         };
     });

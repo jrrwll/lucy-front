@@ -1,271 +1,545 @@
 [
   {
-    "key": "length",
+    "value": "length",
     "label": "长度",
     "units": [
       {
-        "key": "m",
+        "value": "m",
         "label": "米",
         "pinyin": "mi",
         "convert": 1,
         "is_default": true
       },
       {
-        "key": "km",
+        "value": "km",
         "label": "千米(公里)",
         "pinyin": "qianmi(gongli)",
         "convert": 1000
       },
       {
-        "key": "dm",
+        "value": "dm",
         "label": "分米",
         "pinyin": "fenmi",
         "convert": 0.1
       },
       {
-        "key": "cm",
+        "value": "cm",
         "label": "厘米",
         "pinyin": "limi",
         "convert": 0.01
       },
       {
-        "key": "mm",
+        "value": "mm",
         "label": "毫米",
         "pinyin": "haomi",
         "convert": 0.001
       },
       {
-        "key": "um",
+        "value": "um",
         "label": "微米",
         "pinyin": "weimi",
         "convert": 0.000001
       },
       {
-        "key": "nm",
+        "value": "nm",
         "label": "纳米",
         "pinyin": "nami",
         "convert": 0.000000001
       },
       {
-        "key": "pm",
+        "value": "pm",
         "label": "皮米",
         "pinyin": "pimu",
         "convert": 0.000000000001
       },
       {
-        "key": "ly",
+        "value": "ly",
         "label": "光年",
         "pinyin": "guangnian",
         "convert": "9.4607e+15"
       },
       {
-        "key": "au",
+        "value": "au",
         "label": "天文单位",
         "pinyin": "tianwendanwei",
         "convert": 149600000000
       },
       {
-        "key": "in",
+        "value": "in",
         "label": "英寸",
         "pinyin": "yingcun",
         "convert": 0.0254
       },
       {
-        "key": "ft",
+        "value": "ft",
         "label": "英尺",
         "pinyin": "yingchi",
         "convert": 0.3048
       },
       {
-        "key": "yd",
+        "value": "yd",
         "label": "码",
         "pinyin": "ma",
         "convert": 0.9144
       },
       {
-        "key": "mi",
+        "value": "mi",
         "label": "英里",
         "pinyin": "yingli",
         "convert": 1609.344
       },
       {
-        "key": "nmi",
+        "value": "nmi",
         "label": "海里",
         "pinyin": "haili",
         "convert": 1852
       },
       {
-        "key": "fm",
+        "value": "fm",
         "label": "英寻",
         "pinyin": "yingxun",
         "convert": 1.8288
       },
       {
-        "key": "fur",
+        "value": "fur",
         "label": "弗隆",
         "pinyin": "fulong",
         "convert": 201.168
       },
       {
-        "key": "shili",
+        "value": "shili",
         "label": "里",
         "convert": 500
       },
       {
-        "key": "zhang",
+        "value": "zhang",
         "label": "丈",
         "pinyin": "shizhang",
         "convert": 3.333333333333
       },
       {
-        "key": "chi",
+        "value": "chi",
         "label": "尺",
         "pinyin": "shichi",
         "convert": 0.333333333333
       },
       {
-        "key": "cun",
+        "value": "cun",
         "label": "寸",
         "pinyin": "shicun",
         "convert": 0.033333333333
       },
       {
-        "key": "fen",
+        "value": "fen",
         "label": "分",
         "convert": 0.003333333333
       },
       {
-        "key": "li",
+        "value": "li",
         "label": "厘",
         "convert": 0.000333333333
       },
       {
-        "key": "hao",
+        "value": "hao",
         "label": "毫",
         "convert": 0.000033333333
       }
     ]
   },
   {
-    "key": "area",
+    "value": "area",
     "label": "面积",
     "units": [
       {
-        "key": "m2",
+        "value": "m2",
         "label": "平方米",
         "pinyin": "pingfangmi",
         "is_default": true,
         "convert": 1
       },
       {
-        "key": "km2",
+        "value": "km2",
         "label": "平方千米",
         "pinyin": "pingfangqianmi",
         "convert": 1000000
       },
       {
-        "key": "ha",
+        "value": "ha",
         "label": "公顷",
         "pinyin": "gongqing",
         "convert": 10000
       },
       {
-        "key": "are",
+        "value": "are",
         "label": "公亩",
         "pinyin": "gongmu",
         "convert": 100
       },
       {
-        "key": "dm2",
+        "value": "dm2",
         "label": "平方分米",
         "pinyin": "pingfangfenmi",
         "convert": 0.01
       },
       {
-        "key": "cm2",
+        "value": "cm2",
         "label": "平方厘米",
         "pinyin": "pingfanglimi",
         "convert": 0.0001
       },
       {
-        "key": "mm2",
+        "value": "mm2",
         "label": "平方毫米",
         "pinyin": "pingfanghaomi",
         "convert": 0.0000001
       },
       {
-        "key": "qing",
+        "value": "qing",
         "label": "顷",
         "convert": 66666.6666666667
       },
       {
-        "key": "mu",
+        "value": "mu",
         "label": "亩",
         "convert": 666.666666666667
       },
       {
-        "key": "fen",
+        "value": "fen",
         "label": "分",
         "convert": 66.6666666666667
       },
       {
-        "key": "chi2",
+        "value": "chi2",
         "label": "平方尺",
         "pinyin": "pingfangchi",
         "convert": 0.111111111111
       },
       {
-        "key": "cun2",
+        "value": "cun2",
         "label": "平方寸",
         "pinyin": "pingfangcun",
         "convert": 0.001111111111
       },
       {
-        "key": "acre",
+        "value": "acre",
         "label": "英亩",
         "pinyin": "yingmu",
         "convert": 4046.8564224
       },
       {
-        "key": "mi2",
+        "value": "mi2",
         "label": "平方英里",
         "pinyin": "pingfangyingli",
         "convert": 2589988.110336
       },
       {
-        "key": "yd2",
+        "value": "yd2",
         "label": "平方码",
         "pinyin": "pingfangma",
-        "convert": 0.8361274
+        "convert": 0.83612736
       },
       {
-        "key": "ft2",
+        "value": "ft2",
         "label": "平方英尺",
         "pinyin": "pingfangyingchi",
-        "convert": 0.092903
+        "convert": 0.09290304
       },
       {
-        "key": "in2",
+        "value": "in2",
         "label": "平方英寸",
         "pinyin": "pingfangyingcun",
-        "convert": 0.0006452
+        "convert": 0.00064516
       }
     ]
   },
   {
-    "key": "volume",
-    "label": "体积"
+    "value": "volume",
+    "label": "体积",
+    "units": [
+      {
+        "value": "m3",
+        "label": "立方米",
+        "pinyin": "lifangmi",
+        "is_default": true,
+        "convert": 1
+      },
+      {
+        "value": "dm3",
+        "label": "立方分米",
+        "pinyin": "lifangfenmi",
+        "convert": 0.001
+      },
+      {
+        "value": "cm3",
+        "label": "立方厘米",
+        "pinyin": "lifanglimi",
+        "convert": 0.000001
+      },
+      {
+        "value": "mm3",
+        "label": "立方毫米",
+        "pinyin": "lifanghaomi",
+        "convert": 0.000000001
+      },
+      {
+        "value": "l",
+        "label": "升",
+        "pinyin": "sheng",
+        "convert": 0.001
+      },
+      {
+        "value": "ml",
+        "label": "毫升",
+        "pinyin": "haosheng",
+        "convert": 0.000001
+      },
+      {
+        "value": "shi",
+        "label": "石",
+        "convert": 0.1
+      },
+      {
+        "value": "ft3",
+        "label": "立方英尺",
+        "pinyin": "lifangyingchi",
+        "convert": 0.028316846592
+      },
+      {
+        "value": "in3",
+        "label": "立方英寸",
+        "pinyin": "lifangyingcun",
+        "convert": 0.000016387064
+      },
+      {
+        "value": "yd3",
+        "label": "立方码",
+        "pinyin": "lifangma",
+        "convert": 0.764554857984
+      },
+      {
+        "value": "uk_gal",
+        "label": "英制加仑",
+        "pinyin": "yingzhijialun",
+        "convert": 0.0045461
+      },
+      {
+        "value": "us_gal",
+        "label": "美制加仑",
+        "pinyin": "meizhijialun",
+        "convert": 0.0037854
+      },
+      {
+        "value": "uk_oz",
+        "label": "英制液体盎司",
+        "pinyin": "yingzhiyetiangsi",
+        "convert": 0.0000284
+      },
+      {
+        "value": "us_oz",
+        "label": "美制液体盎司",
+        "pinyin": "meizhiyetiangsi",
+        "convert": 0.0000296
+      }
+    ]
   },
   {
-    "key": "weight",
-    "label": "重量"
+    "value": "weight",
+    "label": "重量",
+    "units": [
+      {
+        "value": "kg",
+        "label": "千克",
+        "pinyin": "qianke",
+        "is_default": true,
+        "convert": 1
+      },
+      {
+        "value": "g",
+        "label": "克",
+        "pinyin": "ke",
+        "convert": 0.001
+      },
+      {
+        "value": "mg",
+        "label": "毫克",
+        "pinyin": "haoke",
+        "convert": 0.000001
+      },
+      {
+        "value": "ug",
+        "label": "微克",
+        "pinyin": "weike",
+        "convert": 0.000000001
+      },
+      {
+        "value": "t",
+        "label": "吨",
+        "pinyin": "dun",
+        "convert": 1000
+      },
+      {
+        "value": "dan",
+        "label": "担",
+        "convert": 50
+      },
+      {
+        "value": "jin",
+        "label": "斤",
+        "convert": 0.5
+      },
+      {
+        "value": "liang",
+        "label": "两",
+        "convert": 0.05
+      },
+      {
+        "value": "qian",
+        "label": "钱",
+        "convert": 0.005
+      },
+      {
+        "value": "ct",
+        "label": "克拉",
+        "pinyin": "kela",
+        "convert": 0.0002
+      },
+      {
+        "value": "lb",
+        "label": "磅",
+        "pinyin": "bang",
+        "convert": 0.4535924
+      },
+      {
+        "value": "oz",
+        "label": "盎司",
+        "pinyin": "angsi",
+        "convert": 0.0283495
+      },
+      {
+        "value": "toz",
+        "label": "金衡盎司",
+        "pinyin": "jinhengangsi",
+        "convert": 31.1034768
+      },
+      {
+        "value": "gr",
+        "label": "格令",
+        "pinyin": "geling",
+        "convert": 0.0000648
+      },
+      {
+        "value": "dr",
+        "label": "打兰",
+        "pinyin": "danlan",
+        "convert": 0.0017718
+      },
+      {
+        "value": "lt",
+        "label": "长吨",
+        "pinyin": "changdun",
+        "convert": 1016.0469088
+      },
+      {
+        "value": "st",
+        "label": "短吨",
+        "pinyin": "duandun",
+        "convert": 907.18474
+      }
+    ]
   },
   {
-    "key": "temperature",
-    "label": "温度"
+    "value": "temperature",
+    "label": "温度",
+    "units": [
+      {
+        "value": "K",
+        "label": "开氏度",
+        "pinyin": "kaishidu",
+        "is_default": true,
+        "convert": 1
+      },
+      {
+        "value": "C",
+        "label": "摄氏度",
+        "pinyin": "sheshidu",
+        "convert_to": "$1 + 273.15",
+        "convert_from": "$1 - 273.15"
+      },
+      {
+        "value": "F",
+        "label": "华氏度",
+        "pinyin": "huashidu",
+        "convert_to": "($1 - 32) * 5 / 9 + 273.15",
+        "convert_from": "($1 - 273.15) * 9 / 5 + 32"
+      },
+      {
+        "value": "R",
+        "label": "兰氏度",
+        "pinyin": "lanshidu",
+        "convert_to": "$1 * 5 / 9",
+        "convert_from": "$1 * 9 / 5"
+      }
+    ]
   },
   {
-    "key": "time",
-    "label": "时间"
+    "value": "time",
+    "label": "时间",
+    "units": [
+      {
+        "value": "s",
+        "label": "秒",
+        "pinyin": "miao",
+        "is_default": true,
+        "convert": 1
+      },
+      {
+        "value": "min",
+        "label": "分",
+        "pinyin": "fen",
+        "convert": 60
+      },
+      {
+        "value": "h",
+        "label": "时",
+        "pinyin": "shi",
+        "convert": 3600
+      },
+      {
+        "value": "d",
+        "label": "天",
+        "pinyin": "tian",
+        "convert": 86400
+      },
+      {
+        "value": "w",
+        "label": "周(星期)",
+        "pinyin": "zhou(xingqi)",
+        "convert": 604800
+      },
+      {
+        "value": "yr",
+        "label": "年",
+        "pinyin": "nian",
+        "convert": 31557967.2
+      },
+      {
+        "value": "ms",
+        "label": "毫秒",
+        "pinyin": "haomiao",
+        "convert": 0.001
+      },
+      {
+        "value": "us",
+        "label": "微秒",
+        "pinyin": "weimiao",
+        "convert": 0.000001
+      },
+      {
+        "value": "ns",
+        "label": "纳秒",
+        "pinyin": "namiao",
+        "convert": 0.000000001
+      }
+    ]
   }
 ]
