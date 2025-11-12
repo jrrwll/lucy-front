@@ -36,42 +36,40 @@ const Index: React.FC = () => {
     };
 
     return (
-        <div>
-            <Space direction="vertical" size="small" style={{ width: "100%" }}>
-                <Row gutter={8}>
-                    <Col span={16}>
-                        <Input
-                            placeholder="Ip Address"
-                            value={ip}
-                            onChange={(e) => setIp(e.target.value)}
-                        />
-                    </Col>
-                    <Col span={4}>
-                        <Button type="primary" onClick={onClick}>
-                            查询
-                        </Button>
-                    </Col>
-                    <Col span={4}>
-                        <Select defaultValue={language} onChange={handleLanguageChange}>
-                            <Option value="json">json</Option>
-                            <Option value="yaml">yaml</Option>
-                            <Option value="toml">toml</Option>
-                            <Option value="xml">xml</Option>
-                        </Select>
-                    </Col>
-                </Row>
-                <Row>
-                    <CodeMirror
-                        key={language}
-                        value={content}
-                        onChange={onChange}
-                        minHeight={`${window.innerHeight / 2}px`}
-                        minWidth={`${window.innerWidth / 2}px`}
-                        extensions={EXTENSIONS}
+        <Space direction="vertical">
+            <Row gutter={8}>
+                <Col span={16}>
+                    <Input
+                        placeholder="Ip地址"
+                        value={ip}
+                        onChange={(e) => setIp(e.target.value)}
                     />
-                </Row>
-            </Space>
-        </div>
+                </Col>
+                <Col span={4}>
+                    <Button type="primary" onClick={onClick}>
+                        查询
+                    </Button>
+                </Col>
+                <Col span={4}>
+                    <Select defaultValue={language} onChange={handleLanguageChange}>
+                        <Option value="json">json</Option>
+                        <Option value="yaml">yaml</Option>
+                        <Option value="toml">toml</Option>
+                        <Option value="xml">xml</Option>
+                    </Select>
+                </Col>
+            </Row>
+            <Row>
+                <CodeMirror
+                    key={language}
+                    value={content}
+                    onChange={onChange}
+                    minHeight={`${window.innerHeight / 2}px`}
+                    minWidth={`${window.innerWidth / 2}px`}
+                    extensions={EXTENSIONS}
+                />
+            </Row>
+        </Space>
     );
 };
 

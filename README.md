@@ -6,7 +6,7 @@ pnpm i -D rollup-plugin-visualizer
 
 pnpm i react-router-dom zustand
 
-pnpm i antd
+pnpm i antd @ant-design/icons
 ```
 
 **Tools**

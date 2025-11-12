@@ -84,7 +84,7 @@ const Index: React.FC = () => {
     });
 
     return (
-        <Tabs defaultActiveKey="length" tabPosition="left" items={tab_items} />
+        <Tabs defaultActiveKey="length" items={tab_items} />
     );
 };
 

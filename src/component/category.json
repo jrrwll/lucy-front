@@ -1,0 +1,66 @@
+[
+  {
+    "value": "default",
+    "label": "常用",
+    "tools": [
+    ]
+  },
+  {
+    "value": "encrypt_decrypt",
+    "label": "加解密/签名",
+    "tools": [
+      {
+        "value": "hash",
+        "label": "哈希"
+      }
+    ]
+  },
+  {
+    "value": "encode_decode",
+    "label": "编解码",
+    "tools": [
+      {
+        "value": "base64",
+        "label": "Base64"
+      }
+    ]
+  },
+  {
+    "value": "convert",
+    "label": "转换",
+    "tools": [
+      {
+        "value": "json",
+        "label": "JSON工具"
+      }
+    ]
+  },
+  {
+    "value": "generate",
+    "label": "生成",
+    "tools": [
+      {
+        "value": "qrcode",
+        "label": "二维码"
+      }
+    ]
+  },
+  {
+    "value": "other",
+    "label": "其他",
+    "tools": [
+      {
+        "value": "ip",
+        "label": "IP查询"
+      },
+      {
+        "value": "code",
+        "label": "代码"
+      },
+      {
+        "value": "unit",
+        "label": "单位转换"
+      }
+    ]
+  }
+]

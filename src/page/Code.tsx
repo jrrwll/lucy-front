@@ -25,7 +25,7 @@ const Index: React.FC = () => {
     };
 
     return (
-        <Space direction="vertical" size="small" style={{ width: "100%" }}>
+        <Space direction="vertical">
             <Row gutter={8}>
                 <Col offset={12} span={12}>
                     <Space>
