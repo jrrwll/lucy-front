@@ -1,7 +1,7 @@
-import { Navigate, Route } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import React, { type ComponentType, type ReactNode, Suspense } from 'react';
 import { renderRoutes, type RouteItem } from '@/util/module/router';
-import { BrowserRouter, HashRouter, Routes } from 'react-router'
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router'
 
 function renderReactRoutes<T extends ComponentType>(
     routes: RouteItem<ComponentType<T>>[],
